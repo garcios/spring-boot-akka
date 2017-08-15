@@ -38,7 +38,8 @@ public class SpringExtension extends AbstractExtensionId<SpringExtension.SpringE
         	
         	logger.info("nrOfInstances={}", nrOfInstances );
         	
-            return Props.create(SpringActorProducer.class, applicationContext, actorBeanName).withRouter(new RoundRobinPool(nrOfInstances));
+            return Props.create(SpringActorProducer.class, applicationContext, actorBeanName)
+            		.withRouter(new RoundRobinPool(nrOfInstances));
             		
           
             		
