@@ -15,6 +15,7 @@ public class GreetingService {
     public String greet(String name) {
     	
     	try {
+    		//get random number (1-5)
     		int randomNum = ThreadLocalRandom.current().nextInt(1, 6);
     		logger.info("randomNum: {}", randomNum);
     		
